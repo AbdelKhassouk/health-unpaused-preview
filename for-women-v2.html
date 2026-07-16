@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.className+=" js";</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Women Unpaused — Menopause. Let's talk about it. | Health Unpaused</title>
+<meta name="description" content="Women Unpaused: evidence, science, action — and a community of women who get it. Free for 7 days, then €13/month, no commitment. Part of Health Unpaused.">
+<meta name="theme-color" content="#84102A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Health Unpaused">
+<meta property="og:title" content="Women Unpaused — Menopause. Let's talk about it. | Health Unpaused">
+<meta property="og:description" content="Women Unpaused: evidence, science, action — and a community of women who get it. Free for 7 days, then €13/month, no commitment. Part of Health Unpaused.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23fff' stroke='%238A2432' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%231F3A5F'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/theme.css">
+<script src="assets/js/site.js" defer></script>
+<style>
+/* ============================================================
+   Women Unpaused — community landing (scoped to main.wu)
+   Vibe matched to the Skool brand: deep maroon, dusty pink
+   display type, gold CTAs, handwritten accents, warm & joyful.
+   ============================================================ */
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url('assets/fonts/caveat.woff2') format('woff2')}
+
+.wu{
+  --maroon:#84102A;
+  --maroon-deep:#6B0C20;
+  --maroon-ink:#4A0715;
+  --pink:#F2ABB8;
+  --pink-soft:#E8919F;
+  --pink-bright:#ff009d;
+  --gold:#F2BF4E;
+  --gold-deep:#D9A32E;
+  --wu-cream:#FBF2EC;
+  --wu-cream2:#F5E6DE;
+  --hand:'Caveat',cursive;
+}
+.wu section.pad{padding:84px 0}
+.wu section.pad.tight{padding:60px 0}
+.wu .kicker{font-weight:800;letter-spacing:.26em;text-transform:uppercase;font-size:.74rem;color:var(--maroon);margin-bottom:14px}
+.wu h2{color:var(--maroon-ink)}
+.wu .lede-wu{max-width:58ch;margin-top:14px;color:#5C4650}
+
+/* ---------- hero ---------- */
+.wu-hero{background:linear-gradient(160deg,#8E1F33 0%,var(--maroon) 55%,var(--maroon-deep) 100%);color:#fff;position:relative;overflow:hidden;padding:72px 0 0}
+.wu-hero::before{content:"";position:absolute;left:-16%;top:-12%;width:56%;height:125%;background:radial-gradient(closest-side,rgba(232,145,159,.5),rgba(232,145,159,0));border-radius:50%;pointer-events:none}
+.wu-hero::after{content:"";position:absolute;right:-8%;top:30%;width:30%;height:60%;background:radial-gradient(closest-side,rgba(242,191,78,.14),transparent);border-radius:50%;pointer-events:none}
+.wu-hero .wrap{position:relative;z-index:1}
+.wu-part{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 16px;font-size:.76rem;font-weight:700;letter-spacing:.08em;color:#F5D9DE;margin-bottom:26px}
+.wu-title{font-family:var(--body);font-weight:800;letter-spacing:.01em;line-height:.92;text-transform:uppercase;color:var(--pink);font-size:clamp(3.2rem,9vw,7rem)}
+.wu-title span{display:block}
+.meno-chip{display:inline-block;margin-top:20px;color:var(--gold);font-weight:800;letter-spacing:.34em;text-transform:uppercase;font-size:clamp(.9rem,1.6vw,1.15rem)}
+.esac{margin-top:10px;font-weight:800;font-size:clamp(1.05rem,2.2vw,1.45rem);color:#fff;letter-spacing:.01em}
+.wu-cta-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:32px}
+.btn-gold{
+  display:inline-block;background:var(--gold);color:var(--maroon-ink);text-decoration:none;
+  font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.95rem;
+  padding:17px 34px;border-radius:999px;box-shadow:0 14px 34px -12px rgba(0,0,0,.45);
+  transition:transform .18s,box-shadow .18s,background .18s;border:none;cursor:pointer;font-family:var(--body);
+}
+.btn-gold:hover{background:#F7CD6F;transform:translateY(-2px) rotate(-.5deg);box-shadow:0 20px 40px -14px rgba(0,0,0,.5)}
+.btn-line{color:#fff;text-decoration:none;font-weight:700;border-bottom:2px solid var(--pink);padding-bottom:3px;position:relative}
+.btn-line::after{content:"";position:absolute;inset:-12px -10px} /* 44px+ touch target */
+.btn-line:hover{border-color:#fff}
+.price-note{margin-top:16px;font-size:.92rem;color:#F5D9DE}
+.price-note b{color:#fff}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-chips span{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;font-size:.76rem;font-weight:650;color:#F5D9DE}
+.hero-chips svg{flex:none;stroke:var(--gold)}
+.wu-photo{margin-top:50px;position:relative}
+.wu-photo img{width:100%;aspect-ratio:21/8;object-fit:cover;border-radius:22px 22px 0 0;display:block}
+.wu-photo::after{content:"";position:absolute;inset:0;border-radius:22px 22px 0 0;background:linear-gradient(180deg,rgba(132,16,42,.16),transparent 42%)}
+.hand-note{
+  font-family:var(--hand);font-weight:700;color:#fff;font-size:clamp(1.8rem,3.4vw,2.7rem);
+  line-height:1.02;text-align:center;display:inline-block;
+}
+.hand-note svg{display:block;margin:6px auto 0;width:78%}
+.wu-photo .hand-note{
+  position:absolute;top:-34px;right:5%;transform:rotate(-7deg);z-index:2;
+  text-shadow:0 2px 14px rgba(74,7,21,.55);
+}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--pink);color:var(--maroon-ink);overflow:hidden;padding:13px 0;border-block:3px solid var(--maroon-deep)}
+.marquee .track{display:flex;white-space:nowrap;animation:wuslide 26s linear infinite;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.85rem}
+.marquee span{padding:0 18px;flex:none}
+@keyframes wuslide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- what you get ---------- */
+.sec-cream{background:var(--wu-cream)}
+.sec-cream2{background:var(--wu-cream2)}
+.sec-white{background:#fff}
+.get-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.get-card{background:#fff;border-radius:18px;padding:28px 24px;border:2px solid var(--wu-cream2);box-shadow:0 16px 36px -26px rgba(74,7,21,.35);transition:transform .2s}
+.get-card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.get-card .num{font-family:var(--hand);font-weight:700;font-size:2rem;color:var(--pink-bright);line-height:1}
+.get-card h3{font-family:var(--body);font-size:1.06rem;color:var(--maroon-ink);margin:10px 0 8px;font-weight:800}
+.get-card p{font-size:.9rem;color:#5C4650}
+.sec-cream2 .get-card,.sec-white .get-card{border-color:var(--wu-cream)}
+
+/* ---------- videos ---------- */
+.wu .video-frame{border-color:var(--wu-cream2);box-shadow:0 26px 60px -30px rgba(74,7,21,.45)}
+.wu .vid-cap{margin-top:12px;font-size:.86rem;color:#5C4650;font-weight:600}
+
+/* ---------- how it works ---------- */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.how-card{position:relative;background:#fff;border-radius:18px;padding:34px 26px 28px;border:2px solid var(--wu-cream);box-shadow:0 16px 36px -26px rgba(74,7,21,.3)}
+.how-card .hnum{
+  position:absolute;top:-22px;left:22px;width:46px;height:46px;border-radius:50%;
+  background:var(--maroon);color:var(--gold);font-family:var(--hand);font-weight:700;font-size:1.7rem;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -6px rgba(74,7,21,.5);
+}
+.how-card h3{font-family:var(--body);font-weight:800;font-size:1.08rem;color:var(--maroon-ink);margin-bottom:8px}
+.how-card p{font-size:.92rem;color:#5C4650}
+
+/* ---------- myths rail ---------- */
+.wu-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,250px);gap:20px;overflow-x:auto;padding:8px 2px 20px;margin-top:36px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.wu-rail figure{scroll-snap-align:start;border-radius:14px;overflow:hidden;border:2px solid var(--wu-cream2);box-shadow:0 12px 28px -20px rgba(74,7,21,.4);margin:0;background:#fff}
+.wu-rail img{width:100%;display:block}
+.wu-rail figcaption{padding:11px 13px;font-size:.74rem;font-weight:700;color:var(--maroon);text-align:center}
+
+/* ---------- quote band ---------- */
+.quote-band{background:var(--maroon);color:#fff;position:relative;overflow:hidden}
+.quote-band::before{content:"";position:absolute;right:-12%;bottom:-40%;width:48%;height:120%;background:radial-gradient(closest-side,rgba(232,145,159,.35),transparent);border-radius:50%}
+.quote-band .wrap{position:relative;z-index:1}
+.big-quote{font-family:var(--display);font-size:clamp(1.35rem,2.9vw,2rem);line-height:1.45;color:var(--pink);max-width:26ch}
+.big-quote em{color:#fff;font-style:normal}
+.who{margin-top:26px;display:flex;align-items:center;gap:14px}
+.who .ava{width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--maroon-ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem;flex:none}
+.who b{display:block;color:#fff}
+.who span{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pink)}
+
+/* ---------- founders ---------- */
+.wu-founders{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.wu-person{display:flex;gap:18px;align-items:flex-start;background:#fff;border-radius:18px;padding:26px;border:2px solid var(--wu-cream2);box-shadow:0 16px 36px -26px rgba(74,7,21,.3)}
+.wu-person .ava{width:60px;height:60px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem;color:#fff}
+.wu-person .ava.k{background:var(--maroon)}
+.wu-person .ava.n{background:var(--gold);color:var(--maroon-ink)}
+.wu-person h3{font-family:var(--body);font-weight:800;font-size:1.05rem;color:var(--maroon-ink);margin-bottom:2px}
+.wu-person .role{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-bright);margin-bottom:8px}
+.wu-person p{font-size:.9rem;color:#5C4650}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:760px;margin:40px auto 0}
+.faq{background:#fff;border:2px solid var(--wu-cream2);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 24px;font-weight:800;color:var(--maroon-ink);font-size:1rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{
+  flex:none;width:30px;height:30px;border-radius:50%;background:var(--wu-cream);color:var(--maroon);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;line-height:1;
+  transition:transform .25s,background .2s;
+}
+.faq[open] summary .pm{transform:rotate(45deg);background:var(--gold)}
+.faq .faq-body{padding:0 24px 22px;color:#5C4650;font-size:.94rem}
+.faq .faq-body a{color:var(--maroon);font-weight:700}
+
+/* ---------- real photos ---------- */
+.real-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.real-strip figure{margin:0;background:#fff;border-radius:14px;overflow:hidden;border:2px solid var(--wu-cream);box-shadow:0 16px 36px -24px rgba(74,7,21,.4)}
+.real-strip figure:nth-child(1){transform:rotate(-1.6deg)}
+.real-strip figure:nth-child(2){transform:rotate(1.2deg) translateY(12px)}
+.real-strip figure:nth-child(3){transform:rotate(-.8deg)}
+.real-strip img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.real-strip figcaption{padding:12px 15px;font-family:var(--hand);font-weight:700;font-size:1.25rem;color:var(--maroon);text-align:center}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--gold);color:var(--maroon-ink);text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;left:-10%;top:-60%;width:40%;height:160%;background:radial-gradient(closest-side,rgba(255,255,255,.35),transparent);border-radius:50%}
+.final .wrap{position:relative;z-index:1}
+.final h2{color:var(--maroon-ink);font-size:clamp(2rem,4.6vw,3.2rem)}
+.final .hand-note{color:var(--maroon);font-size:clamp(1.7rem,3vw,2.4rem);transform:rotate(-4deg)}
+.btn-maroon{
+  display:inline-block;background:var(--maroon);color:#fff;text-decoration:none;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;font-size:.98rem;padding:18px 40px;border-radius:999px;
+  box-shadow:0 16px 36px -14px rgba(74,7,21,.55);transition:transform .18s,background .18s;margin-top:30px;
+}
+.btn-maroon:hover{background:var(--maroon-deep);transform:translateY(-2px)}
+.final .price-note{color:#6B4E14}
+.final .price-note b{color:var(--maroon-ink)}
+
+/* focus mode + reduced motion: calm everything */
+body.focus .marquee{display:none}
+body.focus .wu-hero::before,body.focus .wu-hero::after,
+body.focus .quote-band::before,body.focus .final::before{display:none}
+body.focus .wu-photo .hand-note{position:static;transform:none;text-shadow:none;color:var(--pink);display:block;margin-bottom:10px}
+body.focus .real-strip figure{transform:none!important}
+body.focus .get-card:hover,body.focus .how-card{transform:none}
+body.focus .get-card,body.focus .how-card,body.focus .wu-person,body.focus .faq{box-shadow:none}
+body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
+@media(prefers-reduced-motion:reduce){
+  .marquee .track{animation:none}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .get-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:1fr;gap:34px}
+  .wu-founders{grid-template-columns:1fr}
+  .real-strip{grid-template-columns:1fr}
+  .real-strip figure{transform:none!important}
+  .wu-photo .hand-note{top:-26px;right:3%}
+  .wu-photo img{aspect-ratio:16/9}
+}
+@media(max-width:640px){
+  .wu section.pad{padding:58px 0}
+  .wu-hero{padding-top:54px}
+}
+@media(max-width:560px){
+  .get-grid{grid-template-columns:1fr}
+  .wu-photo img{aspect-ratio:4/3}
+  .wu-part{font-size:.66rem;letter-spacing:.04em;line-height:1.5}
+  .wu-person{flex-direction:column}
+  .wu-person .ava{width:52px;height:52px}
+}
+@media(max-width:400px){
+  .btn-maroon{padding:16px 24px;font-size:.9rem}
+  .btn-gold{padding:15px 26px;font-size:.88rem}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="focus-note" role="status">Focus Mode is on — a calmer, simplified view. Turn it off with the switch in the menu.</div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Health Unpaused — home">
+      <svg width="50" height="50" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <path id="arcTop" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0"/>
+          <path id="arcBot" d="M 60,60 m -44,0 a 44,44 0 1,0 88,0"/>
+        </defs>
+        <circle cx="60" cy="60" r="57" fill="#fff" stroke="#8A2432" stroke-width="1.6"/>
+        <circle cx="60" cy="60" r="34" fill="none" stroke="#B9C0BA" stroke-width="1.4"/>
+        <text font-family="Hanken Grotesk" font-size="12.5" font-weight="700" letter-spacing="3" fill="#7A1E2B"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">HEALTH UNPAUSED</textPath></text>
+        <text font-family="Hanken Grotesk" font-size="7.5" font-weight="600" letter-spacing="2" fill="#7A1E2B"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">SCIENCE · EVIDENCE · ACTION</textPath></text>
+        <text x="60" y="72" text-anchor="middle" font-family="Young Serif" font-size="34" fill="#1F3A5F">W</text>
+      </svg>
+      <span class="brand-name">Health Unpaused<small>Research · Distilled</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <div class="has-sub">
+        <a href="for-women.html">For Women <svg class="caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="sub" aria-label="For Women">
+          <a href="for-women.html">Overview<small>The evidence brief &amp; what you get</small></a>
+          <a href="for-women-v2.html">Women Unpaused<small>The community — let's talk about it</small></a>
+        </div>
+      </div>
+      <a href="for-doctors.html">For Doctors</a>
+      <a href="for-hr.html">For HR</a>
+      <a href="for-insurance.html">For Insurers</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+      <a href="invest.html">Invest</a>
+      <a class="nav-join-mobile" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Join the community ↗</a>
+    </nav>
+    <button class="focus-toggle" id="focusToggle" aria-pressed="false" title="Focus Mode simplifies layout and typography for easier reading — helpful for ADHD, autism and dyslexia.">
+      <span class="track" aria-hidden="true"><span class="knob"></span></span>
+      <span class="label-txt">Focus&nbsp;Mode</span>
+    </button>
+    <a class="nav-cta" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Join community</a>
+  </div>
+</header>
+
+<main id="main" class="wu">
+
+  <!-- HERO -->
+  <section class="wu-hero" aria-label="Women Unpaused — the community">
+    <div class="wrap">
+      <span class="wu-part">The community for women · part of Health Unpaused</span>
+      <h1 class="wu-title"><span>Women</span><span>Unpaused</span></h1>
+      <div class="meno-chip">Menopause</div>
+      <p class="esac">Evidence. Science. Action. Community.</p>
+      <div class="wu-cta-row">
+        <a class="btn-gold" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Start free trial ↗</a>
+        <a class="btn-line" href="#inside">What's inside ↓</a>
+      </div>
+      <p class="price-note">Free for <b>7 days</b>, then <b>€13/month</b>. No commitment — cancel anytime.</p>
+      <div class="hero-chips">
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Independent — no pharma funding</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Every claim sourced</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Safe &amp; judgement-free</span>
+      </div>
+      <div class="wu-photo">
+        <span class="hand-note" aria-hidden="true">Let's talk<br>about it
+          <svg viewBox="0 0 120 12" fill="none"><path d="M3 8c30-7 82-7 114-2" stroke="#F2BF4E" stroke-width="3" stroke-linecap="round"/></svg>
+        </span>
+        <img src="assets/img/community.webp" alt="A diverse group of women of different ages laughing warmly together" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Evidence</span><span>·</span><span>Science</span><span>·</span><span>Action</span><span>·</span><span>Community</span><span>·</span><span>Menopause — let's talk about it</span><span>·</span>
+      <span>Evidence</span><span>·</span><span>Science</span><span>·</span><span>Action</span><span>·</span><span>Community</span><span>·</span><span>Menopause — let's talk about it</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <section class="pad sec-cream" id="inside">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">What you get</p>
+        <h2>Everything you wish someone had handed you on day one</h2>
+        <p class="lede-wu">We read 100+ pages of new menopause research every month and turn it into a ten-minute brief — then we talk it through together, in a safe community of women who get it.</p>
+      </div>
+      <div class="get-grid stagger">
+        <div class="get-card">
+          <div class="num">01</div>
+          <h3>A monthly evidence brief</h3>
+          <p>The latest research, critically appraised and translated into plain language. Ten minutes, full sources, zero jargon.</p>
+        </div>
+        <div class="get-card">
+          <div class="num">02</div>
+          <h3>A community that gets it</h3>
+          <p>Questions welcome, judgement not. Talk symptoms, treatments and real life with women navigating the same thing.</p>
+        </div>
+        <div class="get-card">
+          <div class="num">03</div>
+          <h3>Myths, busted</h3>
+          <p>HRT, hormones, "just push through" — we hold the common claims up against the evidence and tell you what holds.</p>
+        </div>
+        <div class="get-card">
+          <div class="num">04</div>
+          <h3>Zero product pushing</h3>
+          <p>We sell knowledge, not supplements. Independent, no pharma funding — our only incentive is to be right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEEK INSIDE (videos) -->
+  <section class="pad sec-white">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Come inside</p>
+        <h2>See how it feels before you join</h2>
+        <p class="lede-wu">A welcome from inside the community, and a taste of the questions we take on — like the classic: cardio or weights?</p>
+      </div>
+      <div class="grid-2 stagger" style="margin-top:38px">
+        <div>
+          <div class="video-frame decorative">
+            <video controls preload="none" poster="assets/img/real/desk-wave.jpg" aria-label="Welcome to the Women Unpaused community on Skool">
+              <source src="assets/video/skool-welcome.mov" type="video/quicktime">
+              Your browser can't play this video yet.
+            </video>
+            <span class="poster-note">Video — optimised web version coming soon</span>
+          </div>
+          <p class="vid-cap">Welcome to Women Unpaused — a tour of the community.</p>
+        </div>
+        <div>
+          <div class="video-frame decorative">
+            <video controls preload="none" poster="assets/img/walking.webp" aria-label="Cardio or weights — what the evidence says">
+              <source src="assets/video/cardio-or-weights.mov" type="video/quicktime">
+              Your browser can't play this video yet.
+            </video>
+            <span class="poster-note">Video — optimised web version coming soon</span>
+          </div>
+          <p class="vid-cap">Cardio or weights? A sample of what we dig into.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="pad sec-cream2">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">How it works</p>
+        <h2>Three steps. No commitment.</h2>
+      </div>
+      <div class="how-grid stagger">
+        <div class="how-card">
+          <div class="hnum" aria-hidden="true">1</div>
+          <h3>Start your free week</h3>
+          <p>Join on Skool in your browser or the Skool app. The first 7 days are free — look around, read, say hi (or just lurk, that's fine too).</p>
+        </div>
+        <div class="how-card">
+          <div class="hnum" aria-hidden="true">2</div>
+          <h3>Read the monthly brief</h3>
+          <p>Every month: the new menopause research, appraised and distilled into a ten-minute read with full sources and clear actionables.</p>
+        </div>
+        <div class="how-card">
+          <div class="hnum" aria-hidden="true">3</div>
+          <h3>Talk it through</h3>
+          <p>Bring your questions to the community — and take the actionables (and the sources) with you to your own doctor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MYTHS -->
+  <section class="pad sec-white">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Myth vs. fact</p>
+        <h2>Menopause, debunked — with sources</h2>
+        <p class="lede-wu">From our medical researcher, Nicky Draper. A taste of what lands in the community every month.</p>
+      </div>
+      <div class="wu-rail" role="list" aria-label="Menopause myth-busting cards">
+        <figure role="listitem"><img src="assets/myths/myth-1.png" alt="Myth: menopause is just something you go through. Fact: menopause is confirmed after 12 consecutive months without menstrual bleeding." loading="lazy"><figcaption>"Something you go through"?</figcaption></figure>
+        <figure role="listitem"><img src="assets/myths/myth-2.png" alt="Myth: everyone gets the same symptoms. Fact: symptoms are a pick and mix — some get many, some get none." loading="lazy"><figcaption>Same symptoms for everyone?</figcaption></figure>
+        <figure role="listitem"><img src="assets/myths/myth-4.png" alt="Myth: HRT is harmful. Fact: prescribed by a practitioner who knows your history, the risks of HRT are minimal." loading="lazy"><figcaption>Is HRT harmful?</figcaption></figure>
+        <figure role="listitem"><img src="assets/myths/myth-3.png" alt="Myth: you slowly lose all hormone production. Fact: menopause is a shift into a new hormonal state." loading="lazy"><figcaption>Losing all your hormones?</figcaption></figure>
+        <figure role="listitem"><img src="assets/myths/myth-5.png" alt="Myth: you can't get pregnant in perimenopause. Fact: you may still release a viable egg." loading="lazy"><figcaption>Pregnancy in perimenopause?</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="pad quote-band">
+    <div class="wrap reveal">
+      <p class="big-quote">"I saw countless doctors, had endless scans, listened to 50+ hours of podcasts. I didn't find an easy solution — <em>so I created it.</em>"</p>
+      <div class="who">
+        <div class="ava" aria-hidden="true">KR</div>
+        <div><b>Kia Holm Reimer</b><span>Founder · lived it first</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section class="pad sec-cream">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Who's behind it</p>
+        <h2>Lived experience, meet research rigour</h2>
+      </div>
+      <div class="wu-founders stagger">
+        <div class="wu-person">
+          <div class="ava k" aria-hidden="true">KR</div>
+          <div>
+            <h3>Kia Holm Reimer</h3>
+            <div class="role">Co-founder · 10+ yrs entrepreneur</div>
+            <p>Peri-menopausal and lived the problem — many doctors, many scans, 50+ hours of podcasts. She didn't find an easy solution, so she built one.</p>
+          </div>
+        </div>
+        <div class="wu-person">
+          <div class="ava n" aria-hidden="true">ND</div>
+          <div>
+            <h3>Nicky Draper</h3>
+            <div class="role">Co-founder · 18 yrs medical researcher</div>
+            <p>Former nurse with 20 years in primary and acute care; researcher in ageing, longevity and women's health since 2007. She reads the studies behind every brief.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:30px"><a class="btn-line" href="about.html" style="color:var(--maroon);border-color:var(--pink-soft)">More about us →</a></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pad sec-white">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <p class="kicker">Good to know</p>
+        <h2>Questions, answered honestly</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq">
+          <summary>What does it cost? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Your first 7 days are free. After that it's €13/month with no commitment — you can cancel anytime, directly in Skool.</div>
+        </details>
+        <details class="faq">
+          <summary>Where does the community live? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">On Skool — a calm, ad-free community platform. It works in your browser and there's a Skool app for your phone. Joining takes a couple of clicks: <a href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">skool.com/women-unpaused ↗</a></div>
+        </details>
+        <details class="faq">
+          <summary>Is this medical advice? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">No. Everything we share is educational information with full sources — built to make your conversations with your own doctor better, never to replace them.</div>
+        </details>
+        <details class="faq">
+          <summary>Who actually reads all the research? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Nicky Draper — 18 years as a medical researcher in ageing, longevity and women's health, and a former nurse with 20 years in primary and acute care. Every claim in every brief is traceable to its source. Read more on our <a href="research.html">Research &amp; Evidence</a> page.</div>
+        </details>
+        <details class="faq">
+          <summary>I'm in perimenopause / post-menopause — is it still for me? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Yes. Peri, meno, post — and anyone supporting a partner through it. The research we cover spans the whole journey, and the community is open to wherever you are in yours.</div>
+        </details>
+        <details class="faq">
+          <summary>Will you try to sell me supplements? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Never. We're independent — no pharma funding, no affiliate products, nothing to push. We sell knowledge, and that's the whole business model.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL PHOTOS -->
+  <section class="pad sec-cream2">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="kicker">Behind the scenes</p>
+        <h2>Real people. Real menopause. Real work.</h2>
+      </div>
+      <div class="real-strip stagger">
+        <figure>
+          <img src="assets/img/real/tomatoes.jpg" alt="Kia holding a large tomato in front of her face" loading="lazy">
+          <figcaption>Some say tomatoes help. We tested it.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/real/work-in-progress.jpg" alt="Kia holding a hand-written 'Work in progress' sign at her desk" loading="lazy">
+          <figcaption>Work in progress — literally!</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/real/out-of-bush.jpg" alt="Kia emerging from an olive bush with a big smile" loading="lazy">
+          <figcaption>Out of the bush… now where?</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="pad final">
+    <div class="wrap reveal">
+      <span class="hand-note">Ready when you are…</span>
+      <h2>Menopause. Let's talk about it.</h2>
+      <a class="btn-maroon" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Join Women Unpaused ↗</a>
+      <p class="price-note" style="margin-top:18px">Free for <b>7 days</b>, then <b>€13/month</b>. No commitment — cancel anytime. Hosted on Skool.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Health Unpaused</h3>
+        <p style="max-width:32ch">Science. Evidence. Action. Independent research briefings on menopause and women's health.</p>
+      </div>
+      <div>
+        <h3>Briefings</h3>
+        <ul>
+          <li><a href="for-women.html">For Women</a></li>
+          <li><a href="for-women-v2.html">Women Unpaused community</a></li>
+          <li><a href="for-doctors.html">For Doctors</a></li>
+          <li><a href="for-hr.html">For HR</a></li>
+          <li><a href="for-insurance.html">For Insurers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="research.html">Research &amp; Evidence</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="invest.html">Invest in us</a></li>
+          <li><a href="mailto:hello@healthunpaused.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Community</h3>
+        <ul>
+          <li><a href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Skool community ↗</a></li>
+          <li><a href="https://www.instagram.com/health_unpaused/" target="_blank" rel="noopener">Instagram ↗</a></li>
+          <li><a href="https://www.linkedin.com/company/health-unpaused" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">© 2026 Health Unpaused. All content on this site and in our reports is educational information, not medical advice, and is not a substitute for consultation with a qualified healthcare professional. We are independent: we accept no funding from pharmaceutical, supplement or medical device companies.</p>
+  </div>
+</footer>
+
+</body>
+</html>
