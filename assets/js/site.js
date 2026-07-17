@@ -26,13 +26,13 @@
     });
   }
 
-  /* ---------- Mobile menu (scroll-lock, Escape, outside-tap close) ---------- */
+  /* ---------- Mobile menu (Escape / outside-tap / scroll close — NO body lock:
+       a stuck lock freezes the page on iOS, and the panel scrolls internally) ---------- */
   var menuBtn = document.getElementById("menuBtn");
   var navLinks = document.getElementById("navLinks");
   function setMenu(open) {
     navLinks.classList.toggle("open", open);
     menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    document.documentElement.classList.toggle("menu-open", open);
   }
   if (menuBtn && navLinks) {
     menuBtn.addEventListener("click", function () {
@@ -43,12 +43,19 @@
         setMenu(false); menuBtn.focus();
       }
     });
-    document.addEventListener("click", function (e) {
+    /* pointerdown fires reliably on iOS where document 'click' does not */
+    document.addEventListener("pointerdown", function (e) {
       if (navLinks.classList.contains("open") &&
           !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
         setMenu(false);
       }
     });
+    /* scrolling away also closes the menu */
+    var menuScrollY = 0;
+    window.addEventListener("scroll", function () {
+      if (!navLinks.classList.contains("open")) { menuScrollY = window.scrollY; return; }
+      if (Math.abs(window.scrollY - menuScrollY) > 60) setMenu(false);
+    }, { passive: true });
     navLinks.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () { setMenu(false); });
     });

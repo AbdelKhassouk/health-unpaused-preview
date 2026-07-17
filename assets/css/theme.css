@@ -45,8 +45,10 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-/* pre-reveal X-offsets & tilted cards must never widen the page */
-html,body{overflow-x:clip}
+/* Pre-reveal X-offsets & tilted cards must never widen the page.
+   IMPORTANT: clip lives on main/footer — NEVER on html/body, where it
+   kills touch scrolling entirely (root propagation). */
+main,footer{overflow-x:clip}
 body{
   font-family:var(--body);
   background:var(--paper);
@@ -89,7 +91,7 @@ p{max-width:64ch}
 /* ---------- Header ---------- */
 header{
   position:sticky;top:0;z-index:50;background:rgba(247,247,244,.92);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
   transition:box-shadow .25s;
 }
 header.scrolled{box-shadow:0 10px 30px -18px rgba(31,58,95,.28)}
@@ -313,7 +315,7 @@ section.block.tight{padding:56px 0}
 .video-frame .poster-note{
   position:absolute;left:14px;top:14px;right:14px;width:max-content;max-width:calc(100% - 28px);
   background:rgba(23,38,59,.82);color:#fff;pointer-events:none;
-  font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:7px 12px;border-radius:8px;backdrop-filter:blur(4px);
+  font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:7px 12px;border-radius:8px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
 }
 .video-frame .play{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;
@@ -384,7 +386,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 /* floating mini report tag on the portrait */
 .hero-portrait .float-tag{
   position:absolute;left:16px;bottom:16px;right:16px;background:rgba(255,255,255,.94);
-  backdrop-filter:blur(6px);border-radius:12px;padding:14px 16px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:12px;padding:14px 16px;
   box-shadow:0 12px 30px -12px rgba(31,58,95,.4);
   display:flex;align-items:center;gap:12px;
   animation:tagrise .9s .5s both cubic-bezier(.22,.61,.36,1);
@@ -457,6 +459,8 @@ footer a:hover{color:#fff;text-decoration:underline}
 .brief--tilt{transform:rotate(1.4deg);transition:transform .4s cubic-bezier(.22,.61,.36,1)}
 .brief--tilt:hover{transform:rotate(0deg)}
 body.focus .brief--tilt,body.focus .brief--tilt:hover{transform:none}
+/* mobile: card is full-width — the tilt pokes past the viewport edge, so flatten it */
+@media(max-width:980px){.brief--tilt,.brief--tilt:hover{transform:none}}
 
 /* ============ problem card icons ============ */
 .card .card-ico{
@@ -561,8 +565,6 @@ body.focus .focus-note{display:block}
 }
 /* mobile-menu CTA: hidden on desktop (the bar has its own .nav-cta) */
 .nav-join-mobile{display:none!important}
-/* body scroll-lock while the burger menu is open */
-html.menu-open,html.menu-open body{overflow:hidden}
 @media(max-width:1100px){
   .nav-join-mobile{
     display:block!important;order:-1;margin:2px 0 10px;text-align:center;
