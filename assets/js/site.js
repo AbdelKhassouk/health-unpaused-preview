@@ -86,6 +86,24 @@
     });
   }
 
+  /* ---------- Rotating hero questions ([data-rotate] > .q) ----------
+     Static list in Focus Mode / reduced motion. */
+  document.querySelectorAll("[data-rotate]").forEach(function (wrap) {
+    var qs = wrap.querySelectorAll(".q");
+    if (qs.length < 2) return;
+    var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+               body.classList.contains("focus");
+    if (calm) return; /* CSS shows all statically in focus mode */
+    var i = 0;
+    qs[0].classList.add("show");
+    setInterval(function () {
+      if (body.classList.contains("focus")) return;
+      qs[i].classList.remove("show");
+      i = (i + 1) % qs.length;
+      qs[i].classList.add("show");
+    }, 3400);
+  });
+
   /* ---------- Focus toggle: explicit accessible name ---------- */
   var ft = document.getElementById("focusToggle");
   if (ft && !ft.getAttribute("aria-label")) {

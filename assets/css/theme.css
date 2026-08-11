@@ -497,6 +497,39 @@ body.focus .brief--tilt,body.focus .brief--tilt:hover{transform:none}
 .cred-strip svg{flex:none;stroke:var(--teal-dark)}
 .panel .cred-strip span{background:var(--paper)}
 
+/* ============ recognition (experiential) components ============ */
+/* rotating hero question */
+.q-rotate{
+  font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,2.4vw,1.6rem);
+  color:var(--teal-dark);min-height:2.2em;display:block;margin-bottom:14px;
+}
+.q-rotate .q{opacity:0;transition:opacity .6s ease;position:absolute}
+.q-rotate .q.show{opacity:1;position:static}
+body.focus .q-rotate .q{opacity:1;position:static;display:block;font-size:1.05rem;margin-bottom:2px}
+
+/* recognition photo cards */
+.recog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+@media(max-width:720px){.recog-grid{grid-template-columns:1fr}}
+.recog-card{
+  position:relative;border-radius:14px;overflow:hidden;margin:0;
+  border:1px solid var(--line);box-shadow:0 18px 44px -28px rgba(31,58,95,.45);
+}
+.recog-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.recog-card figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:44px 22px 18px;color:#fff;
+  font-family:var(--display);font-style:italic;font-size:1.05rem;line-height:1.4;
+  background:linear-gradient(180deg,transparent,rgba(23,38,59,.88));
+}
+body.focus .recog-card figcaption{position:static;background:var(--panel);color:var(--navy);padding:16px 18px}
+
+/* pull quote */
+.pullquote{
+  border-left:4px solid var(--teal);padding:6px 0 6px 24px;margin:34px 0;
+  font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.5rem);
+  line-height:1.5;color:var(--navy);max-width:30ch;
+}
+
 /* ============ behind-the-scenes gallery (real photos) ============ */
 .bts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .bts-grid.four{grid-template-columns:repeat(4,1fr)}

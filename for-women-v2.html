@@ -52,6 +52,11 @@
 .wu-title span{display:block}
 .meno-chip{display:inline-block;margin-top:20px;color:var(--gold);font-weight:800;letter-spacing:.34em;text-transform:uppercase;font-size:clamp(.9rem,1.6vw,1.15rem)}
 .esac{margin-top:10px;font-weight:800;font-size:clamp(1.05rem,2.2vw,1.45rem);color:#fff;letter-spacing:.01em}
+.wu-qs{display:flex;flex-direction:column;gap:4px;margin:28px 0 2px}
+.wu-qs span{font-family:var(--hand);font-weight:600;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.12;color:#F5D9DE;transform:rotate(-1deg)}
+.wu-qs span:nth-child(2){transform:rotate(.8deg)}
+.wu-qs span:nth-child(3){transform:rotate(-.6deg)}
+.notjust{margin-top:12px;font-weight:800;color:var(--gold);font-size:clamp(1.05rem,2vw,1.3rem)}
 .wu-cta-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:32px}
 .btn-gold{
   display:inline-block;background:var(--gold);color:var(--maroon-ink);text-decoration:none;
@@ -187,6 +192,7 @@ body.focus .marquee{display:none}
 body.focus .wu-hero::before,body.focus .wu-hero::after,
 body.focus .quote-band::before,body.focus .final::before{display:none}
 body.focus .wu-photo .hand-note{position:static;transform:none;text-shadow:none;color:var(--pink);display:block;margin-bottom:10px}
+body.focus .wu-qs span{transform:none}
 body.focus .real-strip figure{transform:none!important}
 body.focus .get-card:hover,body.focus .how-card{transform:none}
 body.focus .get-card,body.focus .how-card,body.focus .wu-person,body.focus .faq{box-shadow:none}
@@ -275,6 +281,12 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
       <span class="wu-part">The community for women · part of Health Unpaused</span>
       <h1 class="wu-title"><span>Women</span><span>Unpaused</span></h1>
       <div class="meno-chip">Menopause</div>
+      <div class="wu-qs" aria-label="Questions many women ask themselves">
+        <span>"Why can't I remember simple words?"</span>
+        <span>"Why am I exhausted after a full night's sleep?"</span>
+        <span>"Why don't I recognise myself anymore?"</span>
+      </div>
+      <p class="notjust">It's not just you.</p>
       <p class="esac">Evidence. Science. Action. Community.</p>
       <div class="wu-cta-row">
         <a class="btn-gold" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Start free trial ↗</a>
@@ -290,7 +302,7 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
         <span class="hand-note" aria-hidden="true">Let's talk<br>about it
           <svg viewBox="0 0 120 12" fill="none"><path d="M3 8c30-7 82-7 114-2" stroke="#F2BF4E" stroke-width="3" stroke-linecap="round"/></svg>
         </span>
-        <img src="assets/img/community.webp" alt="A diverse group of women of different ages laughing warmly together" fetchpriority="high">
+        <img src="assets/img/doc/kitchen-table.webp" alt="Women of different ethnicities, ages and body shapes around a kitchen table, laughing together" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -309,7 +321,7 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
       <div class="reveal">
         <p class="kicker">What you get</p>
         <h2>Everything you wish someone had handed you on day one</h2>
-        <p class="lede-wu">We read 100+ pages of new menopause research every month and turn it into a ten-minute brief — then we talk it through together, in a safe community of women who get it.</p>
+        <p class="lede-wu">We read 100+ pages of new menopause research every month and turn it into a ten-minute brief — then we talk it through together, in a safe community of women who get it. The brain fog, the 3am wake-ups, the days you don't feel like yourself: it's all speakable here.</p>
       </div>
       <div class="get-grid stagger">
         <div class="get-card">
@@ -320,12 +332,12 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
         <div class="get-card">
           <div class="num">02</div>
           <h3>A community that gets it</h3>
-          <p>Questions welcome, judgement not. Talk symptoms, treatments and real life with women navigating the same thing.</p>
+          <p>Brain fog, exhaustion, anxiety, rage — and the real life it all collides with: work, teenagers, ageing parents. Questions welcome, judgement not.</p>
         </div>
         <div class="get-card">
           <div class="num">03</div>
           <h3>Myths, busted</h3>
-          <p>HRT, hormones, "just push through" — we hold the common claims up against the evidence and tell you what holds.</p>
+          <p>"Brain fog isn't real", "just push through", the HRT scare stories — we hold the common claims up against the evidence and tell you what holds.</p>
         </div>
         <div class="get-card">
           <div class="num">04</div>
@@ -357,7 +369,7 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
         </div>
         <div>
           <div class="video-frame decorative">
-            <video controls preload="none" poster="assets/img/walking.webp" aria-label="Cardio or weights — what the evidence says">
+            <video controls preload="none" poster="assets/img/doc/walking.webp" aria-label="Cardio or weights — what the evidence says">
               <source src="assets/video/cardio-or-weights.mov" type="video/quicktime">
               Your browser can't play this video yet.
             </video>
@@ -463,6 +475,10 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
       </div>
       <div class="faq-list reveal">
         <details class="faq">
+          <summary>Am I losing my mind? <span class="pm" aria-hidden="true">+</span></summary>
+          <div class="faq-body">No — even when it genuinely feels that way. Brain fog is one of the most common things women describe in perimenopause and menopause: words vanish mid-sentence, names go missing, focus slips. It's real, it has a biological basis, and in the overwhelming majority of cases it is not dementia. Understanding what's happening helps in itself — and if you're worried, that's exactly the conversation to take to your own doctor. What we share is education, not medical advice.</div>
+        </details>
+        <details class="faq">
           <summary>What does it cost? <span class="pm" aria-hidden="true">+</span></summary>
           <div class="faq-body">Your first 7 days are free. After that it's €13/month with no commitment — you can cancel anytime, directly in Skool.</div>
         </details>
@@ -519,6 +535,7 @@ body.focus .btn-gold:hover,body.focus .btn-maroon:hover{transform:none}
     <div class="wrap reveal">
       <span class="hand-note">Ready when you are…</span>
       <h2>Menopause. Let's talk about it.</h2>
+      <p style="margin:16px auto 0;max-width:48ch;font-weight:600">This won't always feel like this. Understanding what's happening is the first step — and you don't have to take it alone.</p>
       <a class="btn-maroon" href="https://www.skool.com/women-unpaused-4360" target="_blank" rel="noopener">Join Women Unpaused ↗</a>
       <p class="price-note" style="margin-top:18px">Free for <b>7 days</b>, then <b>€13/month</b>. No commitment — cancel anytime. Hosted on Skool.</p>
     </div>
