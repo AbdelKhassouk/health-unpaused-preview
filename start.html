@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Get your briefing | Health Unpaused</title>
 <meta name="description" content="Tell us who you are — woman, doctor, HR or insurer — and get the monthly menopause evidence brief. Women also get the door to the Women Unpaused community.">
-<meta name="theme-color" content="#F7F7F4">
+<meta name="theme-color" content="#1F3A5F">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Health Unpaused">
 <meta property="og:title" content="Get your briefing | Health Unpaused">
@@ -64,67 +64,252 @@
 
 <main id="main">
 
-  <!-- HERO (bold) -->
+  <!-- HERO: statement + form -->
   <section class="hero-bold" aria-label="Get your briefing">
-    <div class="wrap">
-      <span class="hb-part">Independent · evidence-based · by women, for women</span>
-      <span class="hb-qs" data-rotate aria-label="Questions many women ask themselves">
-        <span class="q">"Why can't I remember simple words?"</span>
-        <span class="q">"Why am I exhausted after a full night's sleep?"</span>
-        <span class="q">"Why don't I recognise myself anymore?"</span>
-      </span>
-      <h1 class="hb-title">It's not just you.<br><em>Get the brief.</em></h1>
-      <div class="hb-chip">Menopause · Evidence · Science · Action</div>
-      <p class="hb-sub">100+ pages of new research every month, turned into one ten-minute read — for women, doctors, HR teams and insurers.</p>
-      <div class="hb-chips">
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Independent — no pharma funding</span>
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Every claim sourced</span>
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Unsubscribe anytime</span>
-      </div>
-      <div style="height:34px"></div>
-    </div>
-  </section>
-
-  <!-- SEGMENT SIGNUP -> Klaviyo -->
-  <section class="block" id="signup">
-    <div class="wrap">
-      <form class="signup reveal" data-signup novalidate>
-        <p class="eyebrow">Get your briefing</p>
-        <h2>Tell us who you are — we'll send the right brief.</h2>
-        <p class="signup__intro">Women also get the door to our community, Women Unpaused — a safe, judgement-free place to talk it through.</p>
-        <div class="signup__fields">
-          <div>
-            <label for="signup-seg">I am a…</label>
-            <select id="signup-seg" name="segment" required>
-              <option value="">Choose…</option>
-              <option value="women">Woman navigating menopause</option>
-              <option value="doctors">Doctor / clinician</option>
-              <option value="hr">HR / People team</option>
-              <option value="insurance">Health insurer</option>
-            </select>
-          </div>
-          <div>
-            <label for="signup-email">Email</label>
-            <input id="signup-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-          </div>
-          <button class="btn-gold" type="submit">Send me the brief</button>
+    <div class="wrap hb-grid">
+      <div>
+        <span class="hb-part">Independent · evidence-based · by women, for women</span>
+        <span class="hb-qs" data-rotate aria-label="Questions many women ask themselves">
+          <span class="q">"Why can't I remember simple words?"</span>
+          <span class="q">"Why am I exhausted after a full night's sleep?"</span>
+          <span class="q">"Why am I suddenly anxious about everything?"</span>
+          <span class="q">"Why don't I recognise myself anymore?"</span>
+        </span>
+        <h1 class="hb-title">It's not just you.<br><em>Get the brief.</em></h1>
+        <div class="hb-chip">Menopause · Evidence · Science · Action</div>
+        <p class="hb-sub">100+ pages of new research every month, turned into one ten-minute read — for women, doctors, HR teams and insurers.</p>
+        <div class="hb-chips">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Independent — no pharma funding</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Every claim sourced</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Unsubscribe anytime</span>
         </div>
-        <label class="signup__consent"><input type="checkbox" name="consent" required> I'm happy to receive the monthly brief by email. Unsubscribe anytime — see our <a href="privacy.html">privacy notice</a>.</label>
+      </div>
+      <div>
+  <!-- SEGMENT SIGNUP -> Klaviyo -->
+  <form class="signup reveal signup--light" id="signup" data-signup novalidate>
+        <p class="eyebrow">Get your briefing — free</p>
+        <h2>Tell us who you are. We'll send the right brief.</h2>
+        <p class="signup__intro">Women also get the door to our community, Women Unpaused.</p>
+        <div class="signup__grid">
+          <div class="f">
+              <label for="signup-first_name">First name</label>
+              <input id="signup-first_name" type="text" name="first_name" autocomplete="given-name" required>
+            </div>
+          <div class="f">
+              <label for="signup-last_name">Last name</label>
+              <input id="signup-last_name" type="text" name="last_name" autocomplete="family-name">
+            </div>
+          <div class="f">
+              <label for="signup-email">Email</label>
+              <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+          <div class="f">
+              <label for="signup-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="signup-phone" type="tel" name="phone" autocomplete="tel" placeholder="+45 …">
+            </div>
+          <div class="f f--full">
+              <label for="signup-segment">I am a…</label>
+              <select id="signup-segment" name="segment" required>
+                <option value="">Choose…</option>
+                <option value="women">Woman navigating menopause</option>
+                <option value="doctors">Doctor / clinician</option>
+                <option value="hr">HR / People team</option>
+                <option value="insurance">Health insurer</option>
+              </select>
+            </div>
+          <div class="signup__extra" data-for="women" hidden>
+            <div class="f">
+              <label for="signup-journey_stage">Where are you in your journey? <span class="opt">(optional)</span></label>
+              <select id="signup-journey_stage" name="journey_stage">
+                <option value="">Choose…</option>
+                <option>Perimenopause</option>
+                <option>Menopause</option>
+                <option>Post-menopause</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
+          </div>
+          <div class="signup__extra" data-for="doctors" hidden>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <select id="signup-role" name="role">
+                <option value="">Choose…</option>
+                <option>GP / family doctor</option>
+                <option>Gynaecologist</option>
+                <option>Nurse / nurse practitioner</option>
+                <option>Other clinician</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="signup-company">Practice / clinic <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
+          </div>
+          <div class="signup__extra" data-for="hr" hidden>
+            <div class="f">
+              <label for="signup-company">Company <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <input id="signup-role" type="text" name="role" autocomplete="organization-title">
+            </div>
+            <div class="f">
+              <label for="signup-company_size">Company size <span class="opt">(optional)</span></label>
+              <select id="signup-company_size" name="company_size">
+                <option value="">Choose…</option>
+                <option>1–49</option>
+                <option>50–249</option>
+                <option>250–999</option>
+                <option>1,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="signup__extra" data-for="insurance" hidden>
+            <div class="f">
+              <label for="signup-company">Company <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <input id="signup-role" type="text" name="role" autocomplete="organization-title">
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
+          </div>
+        </div>
+        <label class="signup__consent"><input type="checkbox" name="consent" required> <span>I'm happy to receive the monthly brief by email. Unsubscribe anytime — see our <a href="privacy.html">privacy notice</a>.</span></label>
+        <button class="btn-gold signup__submit" type="submit">Send me the brief</button>
         <p class="signup__error" role="alert" hidden></p>
         <div class="signup__done" hidden></div>
-      </form>
+  </form>
+      </div>
     </div>
   </section>
 
-  <!-- WHY -->
+  <!-- MARQUEE -->
+  <div class="marquee-hu" aria-hidden="true">
+    <div class="track">
+      <span>Evidence</span><span>·</span><span>Science</span><span>·</span><span>Action</span><span>·</span><span>Menopause — let's talk about it</span><span>·</span>
+      <span>Evidence</span><span>·</span><span>Science</span><span>·</span><span>Action</span><span>·</span><span>Menopause — let's talk about it</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- RECOGNITION -->
   <section class="block panel">
     <div class="wrap">
-      <div class="grid-3 stagger">
-        <div class="card"><h3>Ten minutes, not a hundred tabs</h3><p>We read the research so you don't have to.</p></div>
-        <div class="card"><h3>Graded, not hyped</h3><p>Every finding marked strong, moderate or emerging — with sources.</p></div>
-        <div class="card"><h3>No products, no pharma</h3><p>Independent. Our only product is the evidence.</p></div>
+      <div class="reveal">
+        <p class="eyebrow">Recognise yourself?</p>
+        <h2>Does any of this sound familiar?</h2>
+        <p class="pullquote">This is hard. You're not imagining it. And it isn't "just stress".</p>
       </div>
-      <p class="reveal" style="margin-top:28px"><a href="index.html">Explore the full site →</a></p>
+      <div class="recog-grid three stagger">
+        <figure class="recog-card"><img src="assets/img/doc/desk.webp" alt="A woman at her desk, hand pressed to her forehead" loading="lazy"><figcaption>You've read the same email three times — and the name has just… gone.</figcaption></figure>
+        <figure class="recog-card"><img src="assets/img/doc/car.webp" alt="A woman resting in her parked car before work" loading="lazy"><figcaption>Five minutes in the car before walking in. Already exhausted.</figcaption></figure>
+        <figure class="recog-card"><img src="assets/img/doc/awake.webp" alt="A woman lying awake at 3am" loading="lazy"><figcaption>It's 3am. Wide awake. Again.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="block">
+    <div class="wrap">
+      <div class="reveal"><p class="eyebrow">What you get</p><h2>One clear brief a month. Nothing to sell you.</h2></div>
+      <div class="grid-4 stagger" style="margin-top:36px">
+        <div class="card"><div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Ten minutes</h3><p>We read 100+ pages of new studies. You read ten minutes.</p></div>
+        <div class="card"><div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Graded, not hyped</h3><p>Strong, moderate or emerging — every finding marked, every source listed.</p></div>
+        <div class="card"><div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Built for you</h3><p>Four briefings — women, doctors, HR, insurers — from one evidence base.</p></div>
+        <div class="card"><div class="card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div><h3>Independent</h3><p>No pharma funding. No supplements. Our only product is the evidence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="block panel">
+    <div class="wrap">
+      <div class="reveal"><p class="eyebrow">How it works</p><h2>From studies to something you can use</h2></div>
+      <div class="grid-3 stagger" style="margin-top:36px">
+        <div class="step"><div class="step-num">01</div><h3>Tell us who you are</h3><p style="font-size:.92rem">Woman, doctor, HR or insurer — pick above and we send the right brief.</p></div>
+        <div class="step"><div class="step-num">02</div><h3>Read it in ten minutes</h3><p style="font-size:.92rem">Once a month. Graded findings, plain language, full sources.</p></div>
+        <div class="step"><div class="step-num">03</div><h3>Act on it</h3><p style="font-size:.92rem">Clear next steps — and for women, a community to talk it through.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MYTHS -->
+  <section class="block">
+    <div class="wrap reveal">
+      <p class="eyebrow">Myth vs. evidence</p>
+      <h2>Menopause, debunked — with sources</h2>
+      <div class="myth-rail" role="list" aria-label="Menopause myth-busting cards">
+        <figure class="myth-card" role="listitem"><img src="assets/myths/myth-1.png" alt="Myth: menopause is just something you go through. Fact: menopause is confirmed after 12 consecutive months without menstrual bleeding." loading="lazy"><figcaption class="myth-cap">"Something you go through"?</figcaption></figure>
+        <figure class="myth-card" role="listitem"><img src="assets/myths/myth-2.png" alt="Myth: everyone gets the same symptoms. Fact: symptoms are a pick and mix." loading="lazy"><figcaption class="myth-cap">Same symptoms for everyone?</figcaption></figure>
+        <figure class="myth-card" role="listitem"><img src="assets/myths/myth-4.png" alt="Myth: HRT is harmful. Fact: prescribed by a practitioner who knows your history, the risks are minimal." loading="lazy"><figcaption class="myth-cap">Is HRT harmful?</figcaption></figure>
+        <figure class="myth-card" role="listitem"><img src="assets/myths/myth-3.png" alt="Myth: you slowly lose all hormone production. Fact: it's a shift into a new hormonal state." loading="lazy"><figcaption class="myth-cap">Losing all your hormones?</figcaption></figure>
+        <figure class="myth-card" role="listitem"><img src="assets/myths/myth-5.png" alt="Myth: you can't get pregnant in perimenopause. Fact: you may still release a viable egg." loading="lazy"><figcaption class="myth-cap">Pregnancy in perimenopause?</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY BAND (women) -->
+  <section class="imgband reveal" aria-label="Our community">
+    <img src="assets/img/doc/kitchen-table.webp" alt="Women of different ethnicities, ages and body shapes laughing together at a kitchen table" data-parallax>
+    <div class="wrap">
+      <p class="eyebrow">By women, for women</p>
+      <h2 style="max-width:18ch">People who get it.</h2>
+      <p style="max-width:50ch;margin:16px 0 26px">The monthly brief — plus a safe, judgement-free community to talk it through. Women get the link the moment they sign up.</p>
+      <a class="btn primary" href="#signup">Get the brief &amp; the community ↑</a>
+    </div>
+  </section>
+
+  <!-- FOUNDERS + CREDIBILITY -->
+  <section class="block">
+    <div class="wrap">
+      <div class="reveal"><p class="eyebrow">Who's behind it</p><h2>Lived experience, meet research rigour</h2></div>
+      <div class="grid-2 stagger" style="margin-top:36px">
+        <div class="person"><div class="avatar" aria-hidden="true">KR</div><div><h3>Kia Holm Reimer</h3><div class="role">Co-founder · 10+ yrs entrepreneur</div><p>Peri-menopausal and lived the problem — many doctors, many scans, 50+ hours of podcasts. She didn't find an easy solution, so she built one.</p></div></div>
+        <div class="person"><div class="avatar alt" aria-hidden="true">ND</div><div><h3>Nicky Draper</h3><div class="role">Co-founder · 18 yrs medical researcher</div><p>Former nurse with 20 years in primary and acute care; researcher in ageing, longevity and women's health since 2007. She reads the studies behind every brief.</p></div></div>
+      </div>
+      <div class="cred-strip reveal">
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Former nurse — 20 yrs primary &amp; acute care</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Researcher in women's health since 2007</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Independent — no pharma funding</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Aligned with recognised clinical guidance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block panel">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center"><p class="eyebrow" style="justify-content:center">Good to know</p><h2>Questions, answered honestly</h2></div>
+      <div class="faq-list reveal">
+        <details class="faq"><summary>Is the brief free? <span class="pm" aria-hidden="true">+</span></summary><div class="faq-body">Signing up for the brief is free. The women's community on Skool is free for 7 days, then €13/month with no commitment. Doctors, HR and insurers: we'll follow up personally about your subscription.</div></details>
+        <details class="faq"><summary>Am I losing my mind? <span class="pm" aria-hidden="true">+</span></summary><div class="faq-body">Many women describe brain fog — lost words, walking into rooms and forgetting why. It's common, it's real, and in the overwhelming majority of cases it is not dementia. Understanding it is the first step. (Educational information, not medical advice.)</div></details>
+        <details class="faq"><summary>Is this medical advice? <span class="pm" aria-hidden="true">+</span></summary><div class="faq-body">No. Everything we share is educational information with full sources — built to make conversations with your own doctor better, never to replace them.</div></details>
+        <details class="faq"><summary>Will you try to sell me supplements? <span class="pm" aria-hidden="true">+</span></summary><div class="faq-body">Never. We're independent — no pharma funding, no affiliate products. We sell knowledge, and that's the whole business model.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOPE / CLOSE -->
+  <section class="imgband imgband--center" aria-label="Realistic hope">
+    <img src="assets/img/doc/walking.webp" alt="Three women of different ages and backgrounds walking together in a park" data-parallax>
+    <div class="wrap" style="text-align:center;padding-block:20px">
+      <p class="eyebrow" style="justify-content:center">Realistic hope</p>
+      <h2 style="margin-inline:auto;max-width:22ch">This won't always feel like this.</h2>
+      <p style="margin:14px auto 30px;max-width:54ch">You're not lazy. You're not "broken". Understanding what's happening is the first step — and that starts with one ten-minute read.</p>
+      <a class="btn primary" href="#signup">Get the brief ↑</a>
     </div>
   </section>
 

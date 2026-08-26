@@ -112,36 +112,119 @@
     </div>
   </section>
 
-  <!-- SEGMENT SIGNUP -> Klaviyo -->
-  <section class="block" id="signup">
+  <section class="block" id="signup-section">
     <div class="wrap">
-      <form class="signup reveal signup--locked" data-signup data-segment="doctors" novalidate>
+  <!-- SEGMENT SIGNUP -> Klaviyo -->
+  <form class="signup reveal signup--locked" id="signup" data-signup data-segment="doctors" novalidate>
         <p class="eyebrow">Get your briefing</p>
         <h2>Get the clinician brief.</h2>
         <p class="signup__intro">Current evidence, appraised and referenced — in your inbox monthly. We'll follow up personally to set up your subscription.</p>
-        <div class="signup__fields">
-          <div>
-            <label for="signup-seg">I am a…</label>
-            <select id="signup-seg" name="segment" required>
-              <option value="">Choose…</option>
-              <option value="women">Woman navigating menopause</option>
-              <option value="doctors" selected>Doctor / clinician</option>
-              <option value="hr">HR / People team</option>
-              <option value="insurance">Health insurer</option>
-            </select>
+        <div class="signup__grid">
+          <div class="f">
+              <label for="signup-first_name">First name</label>
+              <input id="signup-first_name" type="text" name="first_name" autocomplete="given-name" required>
+            </div>
+          <div class="f">
+              <label for="signup-last_name">Last name</label>
+              <input id="signup-last_name" type="text" name="last_name" autocomplete="family-name">
+            </div>
+          <div class="f">
+              <label for="signup-email">Email</label>
+              <input id="signup-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+          <div class="f">
+              <label for="signup-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="signup-phone" type="tel" name="phone" autocomplete="tel" placeholder="+45 …">
+            </div>
+          <div class="f f--full">
+              <label for="signup-segment">I am a…</label>
+              <select id="signup-segment" name="segment" required>
+                <option value="">Choose…</option>
+                <option value="women">Woman navigating menopause</option>
+                <option value="doctors" selected>Doctor / clinician</option>
+                <option value="hr">HR / People team</option>
+                <option value="insurance">Health insurer</option>
+              </select>
+            </div>
+          <div class="signup__extra" data-for="women" hidden>
+            <div class="f">
+              <label for="signup-journey_stage">Where are you in your journey? <span class="opt">(optional)</span></label>
+              <select id="signup-journey_stage" name="journey_stage">
+                <option value="">Choose…</option>
+                <option>Perimenopause</option>
+                <option>Menopause</option>
+                <option>Post-menopause</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
           </div>
-          <div>
-            <label for="signup-email">Email</label>
-            <input id="signup-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <div class="signup__extra" data-for="doctors" hidden>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <select id="signup-role" name="role">
+                <option value="">Choose…</option>
+                <option>GP / family doctor</option>
+                <option>Gynaecologist</option>
+                <option>Nurse / nurse practitioner</option>
+                <option>Other clinician</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="signup-company">Practice / clinic <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
           </div>
-          <button class="btn-gold" type="submit">Send me the brief</button>
+          <div class="signup__extra" data-for="hr" hidden>
+            <div class="f">
+              <label for="signup-company">Company <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <input id="signup-role" type="text" name="role" autocomplete="organization-title">
+            </div>
+            <div class="f">
+              <label for="signup-company_size">Company size <span class="opt">(optional)</span></label>
+              <select id="signup-company_size" name="company_size">
+                <option value="">Choose…</option>
+                <option>1–49</option>
+                <option>50–249</option>
+                <option>250–999</option>
+                <option>1,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="signup__extra" data-for="insurance" hidden>
+            <div class="f">
+              <label for="signup-company">Company <span class="opt">(optional)</span></label>
+              <input id="signup-company" type="text" name="company" autocomplete="organization">
+            </div>
+            <div class="f">
+              <label for="signup-role">Your role <span class="opt">(optional)</span></label>
+              <input id="signup-role" type="text" name="role" autocomplete="organization-title">
+            </div>
+            <div class="f">
+              <label for="signup-country">Country <span class="opt">(optional)</span></label>
+              <input id="signup-country" type="text" name="country" autocomplete="country-name">
+            </div>
+          </div>
         </div>
-        <label class="signup__consent"><input type="checkbox" name="consent" required> I'm happy to receive the monthly brief by email. Unsubscribe anytime — see our <a href="privacy.html">privacy notice</a>.</label>
+        <label class="signup__consent"><input type="checkbox" name="consent" required> <span>I'm happy to receive the monthly brief by email. Unsubscribe anytime — see our <a href="privacy.html">privacy notice</a>.</span></label>
+        <button class="btn-gold signup__submit" type="submit">Send me the brief</button>
         <p class="signup__error" role="alert" hidden></p>
         <div class="signup__done" hidden></div>
-      </form>
+  </form>
     </div>
   </section>
+
 
 
   <!-- IMAGE BAND: BUILT FOR THE CONSULTATION ROOM -->
