@@ -15,6 +15,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23fff' stroke='%238A2432' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%231F3A5F'%3EW%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/theme.css">
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/signup.js" defer></script>
 </head>
 <body class="seg-ins">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -109,6 +110,38 @@
     </div>
   </section>
 
+  <!-- SEGMENT SIGNUP -> Klaviyo -->
+  <section class="block" id="signup">
+    <div class="wrap">
+      <form class="signup reveal signup--locked" data-signup data-segment="insurance" novalidate>
+        <p class="eyebrow">Get your briefing</p>
+        <h2>Get the insurer brief.</h2>
+        <p class="signup__intro">Research intelligence with cost, risk and prevention implications — monthly. We'll follow up personally about licensing.</p>
+        <div class="signup__fields">
+          <div>
+            <label for="signup-seg">I am a…</label>
+            <select id="signup-seg" name="segment" required>
+              <option value="">Choose…</option>
+              <option value="women">Woman navigating menopause</option>
+              <option value="doctors">Doctor / clinician</option>
+              <option value="hr">HR / People team</option>
+              <option value="insurance" selected>Health insurer</option>
+            </select>
+          </div>
+          <div>
+            <label for="signup-email">Email</label>
+            <input id="signup-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <button class="btn-gold" type="submit">Send me the brief</button>
+        </div>
+        <label class="signup__consent"><input type="checkbox" name="consent" required> I'm happy to receive the monthly brief by email. Unsubscribe anytime — see our <a href="privacy.html">privacy notice</a>.</label>
+        <p class="signup__error" role="alert" hidden></p>
+        <div class="signup__done" hidden></div>
+      </form>
+    </div>
+  </section>
+
+
   <!-- IMAGE BAND: read the signal early -->
   <section class="imgband reveal" aria-label="Read the signal early">
     <img src="assets/img/research.webp" alt="A researcher working through printed studies and notes at a desk" data-parallax>
@@ -200,6 +233,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="invest.html">Invest in us</a></li>
           <li><a href="mailto:hello@healthunpaused.com">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </div>
       <div>
