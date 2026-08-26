@@ -104,6 +104,28 @@
     }, 3400);
   });
 
+  /* ---------- Marquee: fill any viewport width (no empty gaps) ----------
+     Markup ships with 2 identical groups; we clone until the track is at
+     least 2× the viewport, keeping an even group count so the -50% loop
+     stays seamless. Re-fills on resize. */
+  document.querySelectorAll(".marquee-hu .track, .marquee .track").forEach(function (track) {
+    var items = Array.prototype.slice.call(track.children);
+    var groupLen = items.length / 2;
+    var group = items.slice(0, groupLen).map(function (n) { return n.outerHTML; }).join("");
+    function fill() {
+      track.innerHTML = group + group;
+      var groups = 2;
+      var guard = 0;
+      while (track.scrollWidth < window.innerWidth * 2 + 200 && guard < 40) {
+        track.insertAdjacentHTML("beforeend", group + group);
+        groups += 2; guard++;
+      }
+    }
+    fill();
+    var t;
+    window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(fill, 200); });
+  });
+
   /* ---------- Focus toggle: explicit accessible name ---------- */
   var ft = document.getElementById("focusToggle");
   if (ft && !ft.getAttribute("aria-label")) {
