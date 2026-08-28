@@ -808,3 +808,13 @@ body.focus .signup::before{display:none}
 body.focus .faq[open] summary .pm{transform:none}
 
 .signup__extra{align-items:end}
+
+/* Kia review Aug 27: smaller second hero line, Nicky hero photo aspect, trial pill */
+.hb-title em{font-size:.6em;display:block;margin-top:.18em;letter-spacing:.02em}
+.hb-photo--nicky img{aspect-ratio:1080/666;object-position:center 30%}
+.trial-pill{display:inline-block;margin-top:22px;background:var(--gold);color:#3C2E07;font-weight:800;border-radius:999px;padding:11px 20px;font-size:.88rem;text-decoration:none}
+.trial-pill:hover{background:#F7CD6F}
+.sub-box li b{color:var(--navy)}
+/* rotator crossfade: outgoing fades fast, incoming eases in after — no overlap */
+.hb-qs .q,.q-rotate .q{transition:opacity .22s ease}
+.hb-qs .q.show,.q-rotate .q.show{transition:opacity .55s ease .22s}

@@ -103,7 +103,7 @@ window.HU_SIGNUP = window.HU_SIGNUP || {
       html += "<p>And this is where the conversation happens — a safe, judgement-free space with women who get it:</p>" +
               "<a class='btn-gold' href='" + CFG.skoolUrl + "' target='_blank' rel='noopener'>Join the community ↗</a>";
     } else {
-      html += "<p>We'll also be in touch personally to set up your " + d.segment_label.toLowerCase() + " subscription.</p>";
+      html += "<p>Subscription details for the " + d.segment_label.toLowerCase() + " brief will follow by email.</p>";
     }
     done.innerHTML = html;
     done.hidden = false;
