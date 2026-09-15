@@ -1,0 +1,220 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <div class="focus-note" role="status">{{ section.settings.t4 }}</div>
+  <div class="wrap nav">
+    <a class="brand" href="{{ section.settings.u15 | default: '/' }}" aria-label="Health Unpaused — home">
+      <svg width="50" height="50" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <path id="arcTop" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0"/>
+          <path id="arcBot" d="M 60,60 m -44,0 a 44,44 0 1,0 88,0"/>
+        </defs>
+        <circle cx="60" cy="60" r="57" fill="#fff" stroke="#8A2432" stroke-width="1.6"/>
+        <circle cx="60" cy="60" r="34" fill="none" stroke="#B9C0BA" stroke-width="1.4"/>
+        <text font-family="Hanken Grotesk" font-size="12.5" font-weight="700" letter-spacing="3" fill="#7A1E2B"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">HEALTH UNPAUSED</textPath></text>
+        <text font-family="Hanken Grotesk" font-size="7.5" font-weight="600" letter-spacing="2" fill="#7A1E2B"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">SCIENCE · EVIDENCE · ACTION</textPath></text>
+        <text x="60" y="72" text-anchor="middle" font-family="Young Serif" font-size="34" fill="#1F3A5F">W</text>
+      </svg>
+      <span class="brand-name">Health Unpaused<small>{{ section.settings.t5 }}</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">{{ section.settings.t6 }}</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      {%- assign nav_menu = section.settings.menu -%}
+      {%- if nav_menu != blank and nav_menu.links.size > 0 -%}
+        {%- for link in nav_menu.links -%}
+          {%- if link.links.size > 0 -%}
+      <div class="has-sub">
+        <a href="{{ link.url }}">{{ link.title }} <svg class="caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="sub" aria-label="{{ link.title | escape }}">
+          {%- for child in link.links -%}
+          <a href="{{ child.url }}">{{ child.title }}</a>
+          {%- endfor -%}
+        </div>
+      </div>
+          {%- else -%}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+      <div class="has-sub">
+        <a href="{{ section.settings.u16 | default: '/pages/for-women' }}">For Women <svg class="caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="sub" aria-label="For Women">
+          <a href="{{ section.settings.u17 | default: '/pages/for-women' }}">{{ section.settings.r1 }}</a>
+          <a href="{{ section.settings.u18 | default: '/pages/for-women-v2' }}">{{ section.settings.r2 }}</a>
+        </div>
+      </div>
+      <a href="{{ section.settings.u19 | default: '/pages/for-doctors' }}">{{ section.settings.t7 }}</a>
+      <a href="{{ section.settings.u20 | default: '/pages/for-hr' }}">{{ section.settings.t8 }}</a>
+      <a href="{{ section.settings.u21 | default: '/pages/for-insurance' }}">{{ section.settings.t9 }}</a>
+      <a href="{{ section.settings.u22 | default: '/pages/research' }}">{{ section.settings.t10 }}</a>
+      <a href="{{ section.settings.u23 | default: '/pages/about' }}">{{ section.settings.t11 }}</a>
+      <a href="{{ section.settings.u24 | default: '/pages/invest' }}">{{ section.settings.t12 }}</a>
+      {%- endif -%}
+      <a class="nav-join-mobile" href="{{ section.settings.u25 | default: 'https://www.skool.com/women-unpaused-4360' }}" target="_blank" rel="noopener">{{ section.settings.t13 }}</a>
+    </nav>
+    <button class="focus-toggle" id="focusToggle" aria-pressed="false" title="Focus Mode simplifies layout and typography for easier reading — helpful for ADHD, autism and dyslexia.">{{ section.settings.r3 }}</button>
+    <a class="nav-cta" href="{{ section.settings.u26 | default: 'https://www.skool.com/women-unpaused-4360' }}" target="_blank" rel="noopener">{{ section.settings.t14 }}</a>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Navigation menu (optional)",
+      "info": "Pick a menu from Online Store → Navigation to control the links from admin. Leave empty to use the built-in links below (keeps the dropdown subtitles)."
+    },
+    {
+      "type": "liquid",
+      "id": "r1",
+      "label": "Overview The evidence brief &amp; what you",
+      "default": "Overview<small>The evidence brief &amp; what you get</small>"
+    },
+    {
+      "type": "liquid",
+      "id": "r2",
+      "label": "Women Unpaused The community — let's talk ",
+      "default": "Women Unpaused<small>The community — let's talk about it</small>"
+    },
+    {
+      "type": "liquid",
+      "id": "r3",
+      "label": "Focus&nbsp;Mode",
+      "default": "<span class=\"track\" aria-hidden=\"true\"><span class=\"knob\"></span></span>\n      <span class=\"label-txt\">Focus&nbsp;Mode</span>"
+    },
+    {
+      "type": "textarea",
+      "id": "t4",
+      "label": "Focus Mode is on — a calmer, simplified vi",
+      "default": "Focus Mode is on — a calmer, simplified view. Turn it off with the switch in the menu."
+    },
+    {
+      "type": "text",
+      "id": "t5",
+      "label": "Research · Distilled",
+      "default": "Research · Distilled"
+    },
+    {
+      "type": "text",
+      "id": "t6",
+      "label": "Menu",
+      "default": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "t7",
+      "label": "For Doctors",
+      "default": "For Doctors"
+    },
+    {
+      "type": "text",
+      "id": "t8",
+      "label": "For HR",
+      "default": "For HR"
+    },
+    {
+      "type": "text",
+      "id": "t9",
+      "label": "For Insurers",
+      "default": "For Insurers"
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "Research",
+      "default": "Research"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "About",
+      "default": "About"
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "Invest",
+      "default": "Invest"
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Join the community ↗",
+      "default": "Join the community ↗"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Join community",
+      "default": "Join community"
+    },
+    {
+      "type": "url",
+      "id": "u15",
+      "label": "Link: /"
+    },
+    {
+      "type": "url",
+      "id": "u16",
+      "label": "Link: /pages/for-women"
+    },
+    {
+      "type": "url",
+      "id": "u17",
+      "label": "Link: /pages/for-women"
+    },
+    {
+      "type": "url",
+      "id": "u18",
+      "label": "Link: /pages/for-women-v2"
+    },
+    {
+      "type": "url",
+      "id": "u19",
+      "label": "Link: /pages/for-doctors"
+    },
+    {
+      "type": "url",
+      "id": "u20",
+      "label": "Link: /pages/for-hr"
+    },
+    {
+      "type": "url",
+      "id": "u21",
+      "label": "Link: /pages/for-insurance"
+    },
+    {
+      "type": "url",
+      "id": "u22",
+      "label": "Link: /pages/research"
+    },
+    {
+      "type": "url",
+      "id": "u23",
+      "label": "Link: /pages/about"
+    },
+    {
+      "type": "url",
+      "id": "u24",
+      "label": "Link: /pages/invest"
+    },
+    {
+      "type": "url",
+      "id": "u25",
+      "label": "Link: https://www.skool.com/women-unpaus"
+    },
+    {
+      "type": "url",
+      "id": "u26",
+      "label": "Link: https://www.skool.com/women-unpaus"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

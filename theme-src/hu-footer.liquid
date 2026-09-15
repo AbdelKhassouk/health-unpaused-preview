@@ -1,0 +1,190 @@
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>{{ section.settings.t14 }}</h3>
+        <p style="max-width:32ch">{{ section.settings.t15 }}</p>
+      </div>
+      <div>
+        <h3>{{ section.settings.t16 }}</h3>
+        <ul>
+          {%- if section.settings.menu_briefings != blank and section.settings.menu_briefings.links.size > 0 -%}
+            {%- for link in section.settings.menu_briefings.links -%}
+          <li><a href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a></li>
+            {%- endfor -%}
+          {%- else -%}
+          <li>{{ section.settings.r1 }}</li>
+          <li>{{ section.settings.r2 }}</li>
+          <li>{{ section.settings.r3 }}</li>
+          <li>{{ section.settings.r4 }}</li>
+          <li>{{ section.settings.r5 }}</li>
+          {%- endif -%}
+        </ul>
+      </div>
+      <div>
+        <h3>{{ section.settings.t17 }}</h3>
+        <ul>
+          {%- if section.settings.menu_company != blank and section.settings.menu_company.links.size > 0 -%}
+            {%- for link in section.settings.menu_company.links -%}
+          <li><a href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a></li>
+            {%- endfor -%}
+          {%- else -%}
+          <li>{{ section.settings.r6 }}</li>
+          <li>{{ section.settings.r7 }}</li>
+          <li>{{ section.settings.r8 }}</li>
+          <li>{{ section.settings.r9 }}</li>
+          <li>{{ section.settings.r10 }}</li>
+          {%- endif -%}
+        </ul>
+      </div>
+      <div>
+        <h3>{{ section.settings.t18 }}</h3>
+        <ul>
+          <li>{{ section.settings.r11 }}</li>
+          <li>{{ section.settings.r12 }}</li>
+          <li>{{ section.settings.r13 }}</li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">{{ section.settings.t19 }}</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu_briefings",
+      "label": "Briefings column menu (optional)",
+      "info": "Pick a menu from Online Store → Navigation to control this column from admin. Leave empty to use the built-in links below."
+    },
+    {
+      "type": "link_list",
+      "id": "menu_company",
+      "label": "Company column menu (optional)",
+      "info": "Pick a menu from Online Store → Navigation to control this column from admin. Leave empty to use the built-in links below."
+    },
+    {
+      "type": "liquid",
+      "id": "r1",
+      "label": "For Women",
+      "default": "<a href=\"/pages/for-women\">For Women</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r2",
+      "label": "For Doctors",
+      "default": "<a href=\"/pages/for-doctors\">For Doctors</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r3",
+      "label": "For HR",
+      "default": "<a href=\"/pages/for-hr\">For HR</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r4",
+      "label": "For Insurers",
+      "default": "<a href=\"/pages/for-insurance\">For Insurers</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r5",
+      "label": "Women Unpaused community",
+      "default": "<a href=\"/pages/for-women-v2\">Women Unpaused community</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r6",
+      "label": "Research &amp; Evidence",
+      "default": "<a href=\"/pages/research\">Research &amp; Evidence</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r7",
+      "label": "About",
+      "default": "<a href=\"/pages/about\">About</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r8",
+      "label": "Invest in us",
+      "default": "<a href=\"/pages/invest\">Invest in us</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r9",
+      "label": "Contact",
+      "default": "<a href=\"mailto:hello@healthunpaused.com\">Contact</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r10",
+      "label": "Privacy",
+      "default": "<a href=\"/pages/privacy\">Privacy</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r11",
+      "label": "Skool community ↗",
+      "default": "<a href=\"https://www.skool.com/women-unpaused-4360\" target=\"_blank\" rel=\"noopener\">Skool community ↗</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r12",
+      "label": "Instagram ↗",
+      "default": "<a href=\"https://www.instagram.com/health_unpaused/\" target=\"_blank\" rel=\"noopener\">Instagram ↗</a>"
+    },
+    {
+      "type": "liquid",
+      "id": "r13",
+      "label": "LinkedIn ↗",
+      "default": "<a href=\"https://www.linkedin.com/company/health-unpaused\" target=\"_blank\" rel=\"noopener\">LinkedIn ↗</a>"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Health Unpaused",
+      "default": "Health Unpaused"
+    },
+    {
+      "type": "textarea",
+      "id": "t15",
+      "label": "Science. Evidence. Action. Independent res",
+      "default": "Science. Evidence. Action. Independent research briefings on menopause and women's health."
+    },
+    {
+      "type": "text",
+      "id": "t16",
+      "label": "Briefings",
+      "default": "Briefings"
+    },
+    {
+      "type": "text",
+      "id": "t17",
+      "label": "Company",
+      "default": "Company"
+    },
+    {
+      "type": "text",
+      "id": "t18",
+      "label": "Community",
+      "default": "Community"
+    },
+    {
+      "type": "textarea",
+      "id": "t19",
+      "label": "© 2026 Health Unpaused. All content on thi",
+      "default": "© 2026 Health Unpaused. All content on this site and in our reports is educational information, not medical advice, and is not a substitute for consultation with a qualified healthcare professional. We are independent: we accept no funding from pharmaceutical, supplement or medical device companies."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}
